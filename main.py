@@ -13,7 +13,18 @@ def menu_principal():
 
 
 listaClientes = []  # Lista de clientes
+ventas = [] # Lista para almacenar las ventas
 
+def agregar_venta (cliente, destino):
+	venta = {"cliente": cliente, "destino": destino}
+	ventas.append(vebta)
+	print(f"Venta agregada: {venta}".)
+def arrepentimiento():
+	if ventas:
+		ultima_venta = venta.pop() #elimina la última venta
+		print(f" Se ha revertido la última venta: {ultima_venta}".)
+	else:
+		print("No hay ventas para revertir")
 while True:
 	menu_principal()
 	ingresoNumero = int(input("Ingrese el número (1-8) de la opción a la que quiere acceder: "))
@@ -87,6 +98,12 @@ while True:
 			print("3. Eliminar Venta")
 			print("4. Volver al Menú Principal")
 			opcionSubmenu = int(input("Seleccione una opción: "))
+
+			if opcionSubmenu == 1:
+				nombre_cliente = input("Ingrese nombre del Clientr para la venta: ")
+				destino_venta = input("Ingrese el destino se la venta: ")
+				agregar_venta(nombre_cliente, destino_cliente)
+				
 			if opcionSubmenu == 4:
 				break
 
@@ -105,8 +122,12 @@ while True:
 			print("1. Enviar solicitud de arrepentimiento")
 			print("2. Volver al Menú Principal")
 			opcionSubmenu = int(input("Seleccione una opción: "))
-			if opcionSubmenu == 2:
+			if opcionSubmenu == 1:
+				arrepentimiento()
+			elif opcionSubmenu == 2:
 				break
+			else :
+				print("Opción no válida, intente nuevamente".)
 
 	elif ingresoNumero == 6:
 		print("-- VER REPORTE GENERAL --")
